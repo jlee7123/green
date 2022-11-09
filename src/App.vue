@@ -1,22 +1,14 @@
 <template>
   <v-app>
-    <div>
-      <v-spacer></v-spacer>
-      
+        <Header></Header>
         <AppBar/>
-
-    <v-main>
-      <Header></Header>
       <router-view/>
-      <Footer></Footer>
-    </v-main>
-    </div>
   </v-app>
 </template>
 
 <script>
 import Header from './layout/Header';
-import Footer from './layout/Footer';
+//import Footer from './layout/Footer';
 //import AppBar from './components/AppBar.vue'
 
 export default {
@@ -24,7 +16,7 @@ export default {
   components: {
     //AppBar,
     Header,
-    Footer,
+    //Footer,
   },
 
   data: () => ({

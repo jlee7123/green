@@ -2,13 +2,17 @@
   <div class="background">
     <v-container>
       <br />
-      <h2 class="h4 text-center font-weight-black">
-        C R E A T E &nbsp;&nbsp; A P P R O V A L
-      </h2>
+      <h4 class="h4 text-center font-weight-black">
+        CREATE APPROVAL
+      </h4>
       <br /><br />
+
+      <!-- original -->
 
       <v-card class="pa-7" outlined shaped elevation="3">
         <v-row>
+        <h5 class="cardtitle font-weight-black">DRONE Server Connection</h5>
+        <br><br>
           <v-col>
             <p class="font-weight-bold">HOST :</p>
             <v-text-field
@@ -42,7 +46,7 @@
             ></v-text-field>
           </v-col>
         </v-row>
-      </v-card>
+
 
       <v-row>
         <v-col></v-col>
@@ -80,16 +84,19 @@
         </v-col>
         <v-col></v-col>
       </v-row>
-
-      <br />
+      </v-card>
+      
+      <br /><br />
 
       <v-card class="pa-7" outlined shaped elevation="3">
         <v-row>
-          <label class="font-weight-bold">DRONE ID :</label>
+        <h5 class="cardtitle font-weight-black">DRONE ID</h5>
+        <br>
+        <br>
 
           <v-col>
             <v-text-field
-              class="mx-0 mt-0"
+              class="mr-2 mb-n2 pb-3"
               dense
               filled
               shaped
@@ -121,16 +128,14 @@
         </v-row>
       </v-card>
 
-      <br />
+      <br /><br />
 
       <v-card class="pa-7" outlined shaped elevation="3">
-        <v-row class="pt-4"></v-row>
-        <h4 class="font-weight-black">ID Description</h4>
-        <br />
-
-        <label class="font-weight-bold mt-n2">HOST :</label>
-
+<v-row>
+        <h5 class="cardtitle font-weight-black">DRONE Specification</h5>
+        <br><br>
         <v-col>
+           <label class="font-weight-bold mt-n2">HOST :</label>
           <v-text-field
             class="mr-2 mb-n2 pb-3"
             dense
@@ -141,15 +146,14 @@
             :rules="drone_host_rule"
             placeholder="125.132.13.63"
             label="* GCS Host"
-            hint="예시) gcs.iotocean.org"
+            hint="e.g.) gcs.iotocean.org"
             persistent-hint
             required
           ></v-text-field>
         </v-col>
 
-        <label class="font-weight-bold mt-n2"> DRONE NAME :</label>
-
         <v-col>
+          <label class="font-weight-bold mt-n2"> DRONE NAME :</label>
           <v-text-field
             class="mr-2 mb-n2 pb-3"
             dense
@@ -163,10 +167,11 @@
             required
           ></v-text-field>
         </v-col>
+</v-row> 
 
-        <label class="font-weight-bold mt-n2">GCS :</label>
-
+<v-row>
         <v-col>
+          <label class="font-weight-bold mt-n2">GCS :</label>
           <v-text-field
             class="mr-2 mb-n2 pb-3"
             dense
@@ -181,9 +186,8 @@
           ></v-text-field>
         </v-col>
 
-        <label class="font-weight-bold mt-n2">TYPE :</label>
-
         <v-col>
+          <label class="font-weight-bold mt-n2">TYPE :</label>
           <v-text-field
             class="mr-2 mb-n2"
             dense
@@ -199,10 +203,11 @@
             required
           ></v-text-field>
         </v-col>
+</v-row>
 
-        <label class="font-weight-bold mt-n2">SYSTEM ID :</label>
-
+<v-row>
         <v-col>
+          <label class="font-weight-bold mt-n2">SYSTEM ID :</label>
           <v-text-field
             class="mr-2 mb-n2"
             dense
@@ -216,9 +221,10 @@
           ></v-text-field>
         </v-col>
 
-        <label class="font-weight-bold mt-n2">MAVLink VERSION :</label>
+       
 
         <v-col>
+           <label class="font-weight-bold mt-n2">MAVLink VERSION :</label>
           <v-text-field
             class="mr-2 mb-n2"
             dense
@@ -231,10 +237,11 @@
             required
           ></v-text-field>
         </v-col>
+</v-row>
 
-        <label class="font-weight-bold mt-n2">UPDATE :</label>
-
+<v-row>
         <v-col>
+          <label class="font-weight-bold mt-n2">UPDATE :</label>
           <v-text-field
             class="mr-2 mb-n2"
             dense
@@ -248,9 +255,10 @@
           ></v-text-field>
         </v-col>
 
-        <label class="font-weight-bold mt-n2">BOARD VERSION :</label>
+       
 
         <v-col>
+          <label class="font-weight-bold mt-n2">BOARD VERSION :</label>
           <v-text-field
             class="mr-2 mb-n2"
             dense
@@ -263,10 +271,11 @@
             required
           ></v-text-field>
         </v-col>
+      </v-row>
 
-        <label class="font-weight-bold mt-n2">LTE TYPE :</label>
-
+      <v-row>
         <v-col>
+          <label class="font-weight-bold mt-n2">LTE TYPE :</label>
           <v-text-field
             class="mr-2 mb-n2"
             dense
@@ -279,15 +288,34 @@
             required
           ></v-text-field>
         </v-col>
+        <v-col>
+          </v-col>
+        </v-row>
       </v-card>
-
+      <br /><br />
+      
       <!-- mission START -->
 
-      <br /><br />
-      <label class="font-weight-bold mt-n2">MISSION NAME :</label>
+      <v-card class="pa-7" outlined shaped elevation="3">
+        <v-row>
+        <h5 class="cardtitle font-weight-black">Mission Information</h5>
+        <br><br>
+          <v-col>
+            <p class="font-weight-bold">MISSION NAME :</p>
 
-      <v-col>
-        <v-text-field
+            <v-select
+          :items="missions"
+          ref="mission_name"
+          v-model="mission_name"
+          :rules="mission_name_rule"
+          filled
+          shaped
+          label="Select mission"
+          required
+        ></v-select>
+       
+       <!--
+          <v-text-field
           class="mr-2 mb-n2"
           dense
           filled
@@ -298,7 +326,10 @@
           label="* mission name (e.g. ??)"
           required
         ></v-text-field>
+        -->
+
       </v-col>
+ 
 
       <label v-if="mission_name !== null" class="font-weight-bold mt-n2"
         >mission container:</label
@@ -358,32 +389,44 @@
         </v-col>
       </v-row>
 
+
+
       <v-row>
-        <v-col>
-          <b-btn
-            class="ml-4 mb-n2"
-            tile
+        <v-col></v-col>
+        <v-col cols="3">
+          <v-btn
+            class="mt-2"
             @click="AddMission"
+            elevation="1"
+            color="#64B5F6"
             :disabled="mission_name === null"
-            elevation="5"
-            color="primary"
+            block
+            outlined
+            raised
+            rounded
           >
-            Add Mission
-          </b-btn>
+          Add Mission
+          </v-btn>
         </v-col>
-        <v-col>
-          <b-btn
-            class="mr-6 mb-n2"
-            tile
+        <v-col cols="3">
+          <v-btn
+            class="mt-2"
             @click="DeleteMission"
+            elevation="1"
+            color="#64B5F6"
             :disabled="!add_mission_flag"
-            elevation="5"
-            color="primary"
+            block
+            outlined
+            raised
+            rounded
+            v-on:click="ae_form"
           >
-            Delete Mission
-          </b-btn>
+           Delete Mission
+          </v-btn>
         </v-col>
+        <v-col></v-col>
       </v-row>
+
 
       <v-row class="mt-2">
         <v-col no-gutters>
@@ -419,22 +462,40 @@
                 </tr>
               </template>
             </v-data-table>
+            
           </v-col>
           
-          <v-col>
-            <v-btn
-              class="mr-2 mb-n2 font-weight-bold"
-              tile
-              @click="SendApproval"
-              :disabled="drone_id === null || drone_id === ''"
-              elevation="5"
-              color="success"
-            >
-              Send
-            </v-btn>
-          </v-col>
+
         </v-col>
+
+        
       </v-row>
+      
+        </v-row>
+
+        
+        </v-card>
+
+        <br><br>
+        <v-row>
+          <v-col>
+          <v-btn
+            class="mr-2 mb-n2 font-weight-bold"
+            @click="SendApproval"
+            elevation="1"
+            color="#64B5F6"
+            :disabled="drone_id === null || drone_id === ''"
+            block
+            outlined
+            raised
+            rounded
+          >
+            SEND
+          </v-btn>
+          </v-col>
+
+        </v-row>
+          <br><br><br>
     </v-container>
   </div>
 </template>
@@ -447,6 +508,7 @@ export default {
   data: function () {
     return {
       //app.vue start
+
 
       open: false,
       MOBIUS_DISCONNECTION_TEXT: "Disconnect",
@@ -597,6 +659,16 @@ export default {
       ],
       response: [],
 
+      missions: [
+        'msw_lte',
+        'msw_sparrow_gun',
+        'msw_sparrow_air',
+        'msw_timesync',
+        'msw_webrtc_crow',
+        'msw_webrtc_kea',
+        'msw_lx_cam',
+        ],
+
       mission_header: [
         {
           text: "Column1",
@@ -649,6 +721,7 @@ export default {
       mission_data: [],
       mission_selected: [],
     };
+    
   },
 
   methods: {
@@ -1185,4 +1258,24 @@ export default {
   text-align: left;
   font-weight: black;
 }
+.cardtitle {
+  font-weight: black;
+  color: #31323A;
+  letter-spacing: 1mm;
+  align-content: right;
+}
+.h4 {
+  font-weight: black;
+  color: #31323A;
+  letter-spacing: 2mm;
+}
+.h5 {
+  font-weight: black;
+  color: #31323A;
+  letter-spacing: 2mm;
+}
+
+
+
+
 </style>

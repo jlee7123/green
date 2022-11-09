@@ -2,14 +2,15 @@
   <div id="wrapper" class="header">
     <v-container>
       <v-navigation-drawer
-        fixed=top
+        class=nav
+        fixed="top"
         v-model="drawer"
         :color="color"
         :expand-on-hover="expandOnHover"
         :mini-variant="miniVariant"
         :right="true"
         :permanent="permanent"
-        
+        src="../assets/blueyellow.jpg"
       >
         <v-list dense nav class="py-0">
           <v-list-item>
@@ -29,7 +30,6 @@
             link
             :to="item.to"
           >
-          
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
@@ -53,12 +53,12 @@ export default {
       drawer: true,
       items: [
         {
-          title: "CREATE APPROVAL",
+          title: "Create Approval",
           icon: "mdi-shape-polygon-plus",
           to: "/Approval",
         },
         {
-          title: "RETRIEVE APPROVAL",
+          title: "Retrieve Approval",
           icon: "mdi-checkbox-multiple-marked",
           to: "/rtrvapproval",
         },
@@ -90,7 +90,7 @@ export default {
         },
         */
       ],
-      
+
       //color: "#3b1a9e",
       //color: "#1E88E5",
       color: "#BBDEFB",
@@ -112,8 +112,8 @@ export default {
   display: flex;
   align-items: center;
 }
-
-
-
-
+.nav{
+  text-align: left;
+  text-indent: 1mm;
+}
 </style>
